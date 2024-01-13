@@ -1,11 +1,25 @@
 package ref.ex;
-public class ProductOrderMain {
+import java.util.Scanner;
+public class ProductOrderMain2 {
     public static void main(String[] args) {
-        ProductOrder[] productArray = new ProductOrder[3];
+        Scanner sc = new Scanner(System.in);
+        System.out.print("입력할 주문의 개수를 입력하세요 : ");
+        int orderSize = sc.nextInt();
+        ProductOrder[] productArray = new ProductOrder[orderSize];
 
-        productArray[0] =  createProduct("두부", 2000,2);
-        productArray[1] = createProduct("김치", 5000,1);
-        productArray[2] = createProduct("콜라", 1500,2);
+        for (int i = 0; i < productArray.length; i++) {
+            System.out.println((i+1) + "번째 주문 정보를 입력하세요 : ");
+
+            System.out.print("상품명: ");
+            String productName = sc.next();
+
+            System.out.print("가격: ");
+            int price = sc.nextInt();
+
+            System.out.print("수량: ");
+            int quantity = sc.nextInt();
+            productArray[i] = createProduct(productName, price, quantity);
+        }
         printProduct(productArray);
         int totalAmount = getTotalAmount(productArray);
         System.out.println("총 결제 금액: "+ totalAmount);

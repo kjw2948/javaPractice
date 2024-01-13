@@ -1,0 +1,10 @@
+package oopEx;
+
+public class AccountMain {
+    public static void main(String[] args) {
+        Account account = new Account();
+        account.desposit(10000);
+        account.withdraw(9000);
+        account.withdraw(2000);
+    }
+}

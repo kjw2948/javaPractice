@@ -5,7 +5,6 @@ public class Parent {
     protected int protectedValue;
     private  int privateValue;
     int defaultValue;
-
     public void publicMethod() {
         System.out.println("Parent.publicMethod");
     }

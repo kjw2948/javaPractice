@@ -9,6 +9,5 @@ public class InterfaceMain {
         cat.sound();
         dog.sound();
         cow.sound();
-
     }
 }
